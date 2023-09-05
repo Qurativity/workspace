@@ -22,7 +22,7 @@ public class Usercontroller {
 	@Autowired
 	private Userservices service;
 
-	@PostMapping("signup2")
+	@PostMapping("signup")
 	public ResponseEntity<User> saveUser(@RequestHeader("Messages") String Messages,@RequestBody User user){
 		System.out.print(Messages);
 		 return new ResponseEntity<User>(service.saveUser(user,Messages),HttpStatus.CREATED);
